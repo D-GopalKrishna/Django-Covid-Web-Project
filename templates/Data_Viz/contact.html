@@ -1,18 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid Updates!</title>
+    <title>Contact Us</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  
-<section class="text-gray-700 body-font relative" style="background-image: url(static/wallhaven-83wxly.jpg);">
+<body style="background-color: rgb(17, 16, 16);"> 
+
+  <!-- <img src="{% static 'css/wallhaven-83wxly.jpg' %}" alt=""> -->
+
+<section class="text-gray-700 body-font relative"};">          <!-- this is not rendering the background image -->
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white-900" style="color:white;">Contact Us</h1>
       </div>
+
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">
           <div class="p-2 w-1/2">
@@ -32,7 +36,7 @@
             <a class="text-indigo-500">singh.abhishek151019@gmail.com</a><br>
             <a class="text-indigo-500">nikhil0223@gmail.com</a>
             <p class="leading-normal my-5 text-indigo-500">Bhilai
-              <br>chhattisgarh, india
+              <br>Chhattisgarh, India
             </p>
             <span class="inline-flex">
               <a class="text-gray-500">
