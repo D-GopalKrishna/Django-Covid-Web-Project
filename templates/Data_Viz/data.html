@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styledata.css">
-    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/styledata.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -31,34 +31,31 @@
         
     <div class="menu-bar" style="background-color: black;">
         <div class="logo">
-            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="#" style="opacity: 0.9;">
+            <img src="{% static 'css/logo.jpg' %}" alt="#" style="opacity: 0.9;">
         </div>
         <div class="list" id="li">
             <ul>
-                <li><a href="{{ url_for('mainpage') }}">Home</a></li>
-                <li><a href=" {{ url_for('data') }}">Data</a></li>
-                <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                <li><a href="{}">Home</a></li>
+                <li><a href="{% url 'data' %}">Data</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
             </ul>
         </div>
 
         <!-- This is place for the bug that we have in Mobile phones -->
 
-        <div class="nav">
+<!--         <div class="nav">
             <label>
                 <input type="checkbox">
                 <span class="menu">
                     <span class="hamburger"></span>
                 </span>
                 <ul>
-                    <li><a href="{{ url_for('mainpage') }}">Home</a></li>
-                    <li><a href="{{ url_for('data') }}">Data</a></li>
-                    <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-                    <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                    
                 </ul>
             </label>
         </div>
-    </div>
+    </div> -->
 
     <div class="belownav" style="background-color: black;">
 
@@ -68,19 +65,19 @@
         <div class="casesdata" style="color: blanchedalmond;">
             <div class="cases confirmed" style="box-shadow: 3px 3px 2px grey; ">
                 <h4>Confirmed</h4>
-                <p>{{ posts[0]['confirmed'] }}</p>
+                <p>{{ posts.confirmed }}</p>
             </div>
             <div class="cases deaths" style="box-shadow: 3px 3px 2px grey;">
                 <h4>Deaths</h4>
-                <p>{{ posts[0]['deaths'] }}</p>
+                <p>{{ posts.deaths }}</p>
             </div>
             <div class="cases recovered" style="box-shadow: 3px 3px 2px grey;">
                 <h4>Recovered</h4>
-                <p>{{ posts[0]['recovered'] }}</p>
+                <p>{{ posts.recovered }}</p>
             </div>
             <div class="cases active" style="box-shadow: 3px 3px 2px grey;">
                 <h4>Active</h4>
-                <p>{{ posts[0]['active'] }}</p>
+                <p>{{ posts.active }}</p>
             </div>
         </div>
         <br>
@@ -101,14 +98,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for i in range(37) %}
+
+                            <!-- for i in "x"|ljust:"37"  -->
+                            {% for i in rangy %}
                             <tr>
-                                <td>{{ i+1 }} </td>
-                                <td>{{ posts[0]['states1'][i] }}</td>
-                                <td>{{ posts[0]['confirmed1'][i] }}</td>
-                                <td>{{ posts[0]['recovered1'][i] }}</td>
-                                <td>{{ posts[0]['deaths1'][i] }}</td>
-                                <td>{{ posts[0]['active1'][i] }}</td>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ i }} </td>
+                                <td>{{ posts.states1|length }}</td>
+                                <td>{{ posts.confirmed1| safe }}</td>
+                                <td>{{ posts.recovered1.i }}</td>
+                                <td>{{ posts.deaths1.i }}</td>
+                                <td>{{ posts.active1.i }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

@@ -16,6 +16,7 @@ body{
     justify-content: center;
     background-image: url(wallhaven-83wxly.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 
 .about-section{

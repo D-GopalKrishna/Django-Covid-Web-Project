@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid updates! </title>
-    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet"> 
 </head>
 
@@ -18,10 +18,10 @@
             </div>
             <div class="list" id="li">
                 <ul>
-                    <li><a href="{{ url_for('mainpage') }}">Home</a></li>
-                    <li><a href=" {{ url_for('data') }}">Data</a></li>
-                    <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-                    <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'data' %}">Data</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
                 </ul>
             </div>
             <div class="nav">
@@ -31,10 +31,10 @@
                         <span class="hamburger"></span>
                     </span>
                     <ul>
-                        <li><a href="{{ url_for('mainpage') }}">Home</a></li>
-                        <li><a href="{{ url_for('data') }}">Data</a></li>
-                        <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-                        <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'data' %}">Data</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
                     </ul>
                 </label>
             </div>
@@ -50,7 +50,7 @@
     </header>
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       <script>
-          particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function () {
+          particlesJS.load('particles-js', "{% static 'css/particles.json'%}", function () {
               console.log('particles.json loaded...');
           });
         </script>

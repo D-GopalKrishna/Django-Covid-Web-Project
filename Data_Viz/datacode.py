@@ -4,12 +4,9 @@ import numpy as np
 import pandas as pd
 import json
 import requests
-import pprint
+# import pprint
 import plotly
 from plotly.utils import PlotlyJSONEncoder
-
-from flask import Flask, render_template
-app = Flask(__name__)
 
 
 dkb1 = pd.read_csv('https://api.covid19india.org/csv/latest/state_wise.csv', engine='python', encoding='utf-8')
@@ -29,11 +26,12 @@ deaths1 = np.array(dkb1.iloc[1:,3].values)
 active1 = np.array(dkb1.iloc[1:,4].values)
 
 
+# print(states1)
 
 
 
-posts = [
-    {
+
+posts = {
         'confirmed':confirmed,
         'recovered':recovered,
         'deaths':deaths,
@@ -44,47 +42,10 @@ posts = [
         'deaths1':deaths1,
         'active1':active1,
     }
-]
 
 
 
-
-@app.route('/')
-def mainpage():
-  
-    return render_template('index.html')
-
-
-
-@app.route('/about')
-def aboutus():
-  
-    return render_template('about.html')
-
-
-
-
-@app.route('/contact')
-def contactus():
-  
-    return render_template('contact.html')
-
-
-
-
-
-@app.route('/data')
-
-def data():
-    lineplot1 = country_lineplot()
-    lineplot2 = country_lineplot_rate()
-    pie_india = pie_india_vs_world()
-    statewise_bar = statewise_barplot()
-    statewise_pie = statewise_piechart()
-
-    return render_template('data2.html', posts=posts, plot1=lineplot1, plot2=lineplot2, plot3=pie_india, plot4=statewise_pie, plot5=statewise_bar)
-
-
+### Calling all other functions
 
 
 
@@ -104,13 +65,14 @@ def country_lineplot():
 
     time_series_date1=[]
     for i in range(len(c_data2['cases_time_series'])):
-        time_series_date1.append(c_data2['cases_time_series'][i]['date'])
+        year = c_data2['cases_time_series'][i]['dateymd'][:4]
+        time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
 
-    time_series_date1 = np.array(time_series_date1)
+    time_series_date2 = np.array(time_series_date1)
 
-    time_series_date2=[]
-    for i in time_series_date1:
-        time_series_date2.append(i + "2020")
+    # time_series_date2=[]
+    # for i in time_series_date1:
+    #     time_series_date2.append(i + "2020")
 
     time_series_date3 = pd.to_datetime(time_series_date2, infer_datetime_format=True)
     time_series_date3 = np.array(time_series_date3)
@@ -179,13 +141,14 @@ def country_lineplot_rate():
 
     time_series_date1=[]
     for i in range(len(c_data2['cases_time_series'])):
-        time_series_date1.append(c_data2['cases_time_series'][i]['date'])
+        year = c_data2['cases_time_series'][i]['dateymd'][:4]
+        time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
 
-    time_series_date1 = np.array(time_series_date1)
+    time_series_date2 = np.array(time_series_date1)
 
-    time_series_date2=[]
-    for i in time_series_date1:
-        time_series_date2.append(i + "2020")
+    # time_series_date2=[]
+    # for i in time_series_date1:
+    #     time_series_date2.append(i + "2020")
 
     time_series_date3 = pd.to_datetime(time_series_date2, infer_datetime_format=True)
     time_series_date3 = np.array(time_series_date3)
@@ -321,25 +284,13 @@ def statewise_barplot():
 
 
 
-
-
-# @app.route('/loopdata')
-# def loopdata():
-
-
-
-#     postgi = [{
-#         'states1':states1,
-#         'confirmed1':confirmed1,
-#         'recovered1':recovered1,
-#         'deaths1':deaths1,
-#         'active1':active1,
-#     }]
-
-#     return render_template('loopdata.html', posts=postgi)
+lineplot1 = country_lineplot()
+lineplot2 = country_lineplot_rate()
+pie_india = pie_india_vs_world()
+statewise_bar = statewise_barplot()
+statewise_pie = statewise_piechart()
 
 
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
