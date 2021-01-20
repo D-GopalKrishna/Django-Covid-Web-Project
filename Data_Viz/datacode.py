@@ -90,6 +90,8 @@ def country_lineplot():
     trace1 = go.Scatter(x=dq1['dates'], y=dq1['confirmed_cases'])
     data=[trace1]
     fig = go.Figure(data=data)
+    fig.update_yaxes(type="linear")
+
     fig.update_layout(template="plotly_dark", title_text='Spread of corona virus in India')
     #Timeseries showing the spread of corona virus in India
 
