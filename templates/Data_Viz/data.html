@@ -25,7 +25,7 @@
     <title>Graphs</title>
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <style>
         .nvbari{
             display: flex;
@@ -35,9 +35,9 @@
         .paris{
             margin: 10px;
             width: 80px;
-            height: 40px;
+            height: 35px;
             border-radius: 10px;
-            background: blanchedalmond;
+            background: rgb(231, 225, 215);
         }
 
     </style>
@@ -93,6 +93,7 @@
         </div>
         <br>
         <br>
+        <p style="color: blanchedalmond;">{{ post.states.1 }}</p>
 
         <div class="jumbotron" style="background-color: black;">    <!-- background-color: #332e31; -->
             <div class="container">
@@ -110,18 +111,352 @@
                         </thead>
                         <tbody>
 
-                            <!-- for i in "x"|ljust:"37"  -->
-                            {% for i in rangy %}
+                           
                             <tr>
                                 <!-- Can use forloop.counter -->
-                                <td>{{ i }} </td>
-                                <td>{{ posts.states1|length }}</td>
-                                <td>{{ posts.confirmed1.i}}</td>
-                                <td>{{ posts.recovered1.i }}</td>
-                                <td>{{ posts.deaths1.i }}</td>
-                                <td>{{ posts.active1.i }}</td>
+                                <td>{{ 1 }} </td>
+                                <td>{{ posts.states1.1 }}</td>
+                                <td>{{ posts.confirmed1.1}}</td>
+                                <td>{{ posts.recovered1.1 }}</td>
+                                <td>{{ posts.deaths1.1 }}</td>
+                                <td>{{ posts.active1.1 }}</td>
                             </tr>
-                            {% endfor %}
+                          
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 2 }} </td>
+                                <td>{{ posts.states1.2 }}</td>
+                                <td>{{ posts.confirmed1.2}}</td>
+                                <td>{{ posts.recovered1.2 }}</td>
+                                <td>{{ posts.deaths1.2 }}</td>
+                                <td>{{ posts.active1.2 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 3 }} </td>
+                                <td>{{ posts.states1.3 }}</td>
+                                <td>{{ posts.confirmed1.3}}</td>
+                                <td>{{ posts.recovered1.3 }}</td>
+                                <td>{{ posts.deaths1.3 }}</td>
+                                <td>{{ posts.active1.3 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 4 }} </td>
+                                <td>{{ posts.states1.4 }}</td>
+                                <td>{{ posts.confirmed1.4}}</td>
+                                <td>{{ posts.recovered1.4 }}</td>
+                                <td>{{ posts.deaths1.4 }}</td>
+                                <td>{{ posts.active1.4 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 5 }} </td>
+                                <td>{{ posts.states1.5 }}</td>
+                                <td>{{ posts.confirmed1.5}}</td>
+                                <td>{{ posts.recovered1.5 }}</td>
+                                <td>{{ posts.deaths1.5 }}</td>
+                                <td>{{ posts.active1.5 }}</td>
+                            </tr>
+
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 6 }} </td>
+                                <td>{{ posts.states1.6 }}</td>
+                                <td>{{ posts.confirmed1.6}}</td>
+                                <td>{{ posts.recovered1.6 }}</td>
+                                <td>{{ posts.deaths1.6 }}</td>
+                                <td>{{ posts.active1.6 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 7 }} </td>
+                                <td>{{ posts.states1.7 }}</td>
+                                <td>{{ posts.confirmed1.7}}</td>
+                                <td>{{ posts.recovered1.7 }}</td>
+                                <td>{{ posts.deaths1.7 }}</td>
+                                <td>{{ posts.active1.7 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 8 }} </td>
+                                <td>{{ posts.states1.8 }}</td>
+                                <td>{{ posts.confirmed1.8}}</td>
+                                <td>{{ posts.recovered1.8 }}</td>
+                                <td>{{ posts.deaths1.8 }}</td>
+                                <td>{{ posts.active1.8 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 9 }} </td>
+                                <td>{{ posts.states1.9 }}</td>
+                                <td>{{ posts.confirmed1.9}}</td>
+                                <td>{{ posts.recovered1.9 }}</td>
+                                <td>{{ posts.deaths1.9}}</td>
+                                <td>{{ posts.active1.9 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 10 }} </td>
+                                <td>{{ posts.states1.10 }}</td>
+                                <td>{{ posts.confirmed1.10}}</td>
+                                <td>{{ posts.recovered1.10 }}</td>
+                                <td>{{ posts.deaths1.10 }}</td>
+                                <td>{{ posts.active1.10}}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 11 }} </td>
+                                <td>{{ posts.states1.11 }}</td>
+                                <td>{{ posts.confirmed1.11}}</td>
+                                <td>{{ posts.recovered1.11 }}</td>
+                                <td>{{ posts.deaths1.11 }}</td>
+                                <td>{{ posts.active1.11}}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 12 }} </td>
+                                <td>{{ posts.states1.12 }}</td>
+                                <td>{{ posts.confirmed1.12}}</td>
+                                <td>{{ posts.recovered1.12 }}</td>
+                                <td>{{ posts.deaths1.12 }}</td>
+                                <td>{{ posts.active1.12 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 13 }} </td>
+                                <td>{{ posts.states1.13 }}</td>
+                                <td>{{ posts.confirmed1.13}}</td>
+                                <td>{{ posts.recovered1.13 }}</td>
+                                <td>{{ posts.deaths1.13 }}</td>
+                                <td>{{ posts.active1.13 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 14 }} </td>
+                                <td>{{ posts.states1.14 }}</td>
+                                <td>{{ posts.confirmed1.14}}</td>
+                                <td>{{ posts.recovered1.14 }}</td>
+                                <td>{{ posts.deaths1.14 }}</td>
+                                <td>{{ posts.active1.14 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 15 }} </td>
+                                <td>{{ posts.states1.15 }}</td>
+                                <td>{{ posts.confirmed1.15}}</td>
+                                <td>{{ posts.recovered1.15 }}</td>
+                                <td>{{ posts.deaths1.15 }}</td>
+                                <td>{{ posts.active1.15 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 16 }} </td>
+                                <td>{{ posts.states1.16 }}</td>
+                                <td>{{ posts.confirmed1.16}}</td>
+                                <td>{{ posts.recovered1.16 }}</td>
+                                <td>{{ posts.deaths1.16 }}</td>
+                                <td>{{ posts.active1.16 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 17 }} </td>
+                                <td>{{ posts.states1.17 }}</td>
+                                <td>{{ posts.confirmed1.17}}</td>
+                                <td>{{ posts.recovered1.17 }}</td>
+                                <td>{{ posts.deaths1.17 }}</td>
+                                <td>{{ posts.active1.17 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 18 }} </td>
+                                <td>{{ posts.states1.18 }}</td>
+                                <td>{{ posts.confirmed1.18}}</td>
+                                <td>{{ posts.recovered1.18 }}</td>
+                                <td>{{ posts.deaths1.18 }}</td>
+                                <td>{{ posts.active1.18 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 19 }} </td>
+                                <td>{{ posts.states1.19 }}</td>
+                                <td>{{ posts.confirmed1.19}}</td>
+                                <td>{{ posts.recovered1.19 }}</td>
+                                <td>{{ posts.deaths1.19 }}</td>
+                                <td>{{ posts.active1.19 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 20 }} </td>
+                                <td>{{ posts.states1.20}}</td>
+                                <td>{{ posts.confirmed1.20}}</td>
+                                <td>{{ posts.recovered1.20 }}</td>
+                                <td>{{ posts.deaths1.20 }}</td>
+                                <td>{{ posts.active1.20}}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 21 }} </td>
+                                <td>{{ posts.states1.21 }}</td>
+                                <td>{{ posts.confirmed1.21}}</td>
+                                <td>{{ posts.recovered1.21 }}</td>
+                                <td>{{ posts.deaths1.21 }}</td>
+                                <td>{{ posts.active1.21 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 22 }} </td>
+                                <td>{{ posts.states1.22 }}</td>
+                                <td>{{ posts.confirmed1.22}}</td>
+                                <td>{{ posts.recovered1.22 }}</td>
+                                <td>{{ posts.deaths1.22 }}</td>
+                                <td>{{ posts.active1.22 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 23 }} </td>
+                                <td>{{ posts.states1.23 }}</td>
+                                <td>{{ posts.confirmed1.23}}</td>
+                                <td>{{ posts.recovered1.23 }}</td>
+                                <td>{{ posts.deaths1.23 }}</td>
+                                <td>{{ posts.active1.23 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 24 }} </td>
+                                <td>{{ posts.states1.24 }}</td>
+                                <td>{{ posts.confirmed1.24}}</td>
+                                <td>{{ posts.recovered1.24 }}</td>
+                                <td>{{ posts.deaths1.24 }}</td>
+                                <td>{{ posts.active1.24 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 25 }} </td>
+                                <td>{{ posts.states1.25 }}</td>
+                                <td>{{ posts.confirmed1.25}}</td>
+                                <td>{{ posts.recovered1.25 }}</td>
+                                <td>{{ posts.deaths1.25 }}</td>
+                                <td>{{ posts.active1.25 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 26 }} </td>
+                                <td>{{ posts.states1.26 }}</td>
+                                <td>{{ posts.confirmed1.26}}</td>
+                                <td>{{ posts.recovered1.26 }}</td>
+                                <td>{{ posts.deaths1.26 }}</td>
+                                <td>{{ posts.active1.26 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 27 }} </td>
+                                <td>{{ posts.states1.27 }}</td>
+                                <td>{{ posts.confirmed1.27}}</td>
+                                <td>{{ posts.recovered1.27 }}</td>
+                                <td>{{ posts.deaths1.27 }}</td>
+                                <td>{{ posts.active1.27 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 28 }} </td>
+                                <td>{{ posts.states1.28 }}</td>
+                                <td>{{ posts.confirmed1.28}}</td>
+                                <td>{{ posts.recovered1.28 }}</td>
+                                <td>{{ posts.deaths1.28 }}</td>
+                                <td>{{ posts.active1.28 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 29 }} </td>
+                                <td>{{ posts.states1.29 }}</td>
+                                <td>{{ posts.confirmed1.29}}</td>
+                                <td>{{ posts.recovered1.29 }}</td>
+                                <td>{{ posts.deaths1.29 }}</td>
+                                <td>{{ posts.active1.29 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 30 }} </td>
+                                <td>{{ posts.states1.30 }}</td>
+                                <td>{{ posts.confirmed1.30}}</td>
+                                <td>{{ posts.recovered1.30 }}</td>
+                                <td>{{ posts.deaths1.30 }}</td>
+                                <td>{{ posts.active1.30 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 31 }} </td>
+                                <td>{{ posts.states1.31 }}</td>
+                                <td>{{ posts.confirmed1.31}}</td>
+                                <td>{{ posts.recovered1.31 }}</td>
+                                <td>{{ posts.deaths1.31 }}</td>
+                                <td>{{ posts.active1.31 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 32 }} </td>
+                                <td>{{ posts.states1.32 }}</td>
+                                <td>{{ posts.confirmed1.32}}</td>
+                                <td>{{ posts.recovered1.32 }}</td>
+                                <td>{{ posts.deaths1.32 }}</td>
+                                <td>{{ posts.active1.32 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 33 }} </td>
+                                <td>{{ posts.states1.33 }}</td>
+                                <td>{{ posts.confirmed1.33}}</td>
+                                <td>{{ posts.recovered1.33 }}</td>
+                                <td>{{ posts.deaths1.33 }}</td>
+                                <td>{{ posts.active1.33 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 34 }} </td>
+                                <td>{{ posts.states1.34}}</td>
+                                <td>{{ posts.confirmed1.34}}</td>
+                                <td>{{ posts.recovered1.34}}</td>
+                                <td>{{ posts.deaths1.34}}</td>
+                                <td>{{ posts.active1.34}}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 35 }} </td>
+                                <td>{{ posts.states1.35 }}</td>
+                                <td>{{ posts.confirmed1.35}}</td>
+                                <td>{{ posts.recovered1.35 }}</td>
+                                <td>{{ posts.deaths1.35 }}</td>
+                                <td>{{ posts.active1.35 }}</td>
+                            </tr>
+                            <tr>
+                                <!-- Can use forloop.counter -->
+                                <td>{{ 36 }} </td>
+                                <td>{{ posts.states1.36 }}</td>
+                                <td>{{ posts.confirmed1.36}}</td>
+                                <td>{{ posts.recovered1.36 }}</td>
+                                <td>{{ posts.deaths1.36 }}</td>
+                                <td>{{ posts.active1.36 }}</td>
+                            </tr>
+                            <!-- <tr>
+                                <td>{{ i }} </td>
+                                <td>{{ posts.states1.37 }}</td>
+                                <td>{{ posts.confirmed1.37}}</td>
+                                <td>{{ posts.recovered1.37 }}</td>
+                                <td>{{ posts.deaths1.37 }}</td>
+                                <td>{{ posts.active1.37 }}</td>
+                            </tr> -->
+                            <!-- <tr>
+                                
+                                <td>{{ i }} </td>
+                                <td>{{ posts.states1.38 }}</td>
+                                <td>{{ posts.confirmed1.38}}</td>
+                                <td>{{ posts.recovered1.38 }}</td>
+                                <td>{{ posts.deaths1.38 }}</td>
+                                <td>{{ posts.active1.38 }}</td>
+                            </tr> -->
+
+
                         </tbody>
                     </table>
                 </div>
