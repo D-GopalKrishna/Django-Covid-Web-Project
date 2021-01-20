@@ -77,11 +77,15 @@ WSGI_APPLICATION = 'Covid_Web_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME' : 'd41k9ijl06qads',
+        'USER' : 'vgwxikarozsfyu',
+        'PASSWORD' : '0af7f5107f04c63967ea3200b44443cb0b5dc6ff06c32843c17867e2e12ea0f6',
+        'HOST' : 'ec2-54-144-45-5.compute-1.amazonaws.com',
+        'PORT' : '5432',
     }
 }
-
+# postgres://:@:5432/
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
