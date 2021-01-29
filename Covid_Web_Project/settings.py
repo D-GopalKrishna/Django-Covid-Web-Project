@@ -81,17 +81,17 @@ WSGI_APPLICATION = 'Covid_Web_Project.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME' : 'd41k9ijl06qads',
-    #     'USER' : 'vgwxikarozsfyu',
-    #     'PASSWORD' : '0af7f5107f04c63967ea3200b44443cb0b5dc6ff06c32843c17867e2e12ea0f6',
-    #     'HOST' : 'ec2-54-144-45-5.compute-1.amazonaws.com',
-    #     'PORT' : '5432',
-    # }
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME' : 'd41k9ijl06qads',
+        'USER' : 'vgwxikarozsfyu',
+        'PASSWORD' : '0af7f5107f04c63967ea3200b44443cb0b5dc6ff06c32843c17867e2e12ea0f6',
+        'HOST' : 'ec2-54-144-45-5.compute-1.amazonaws.com',
+        'PORT' : '5432',
+    }
+    # 'default': dj_database_url.config(
+    #     default=config('DATABASE_URL')
+    # )
 }
 # postgres://:@:5432/
 
