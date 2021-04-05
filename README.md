@@ -5,6 +5,7 @@ Checkout at |   http://covid-web-project.herokuapp.com/
 
 Or at https://covid-web-project-django.herokuapp.com/
 
+Credits to <a href='https://github.com/ABHISHEK-SIN-GH'>Abhishek Kumar</a> for the Phantasmagorical front page.
 
 ![heroku](img/Screenshot0.png)
 ![heroku](img/Screenshot1.png)
