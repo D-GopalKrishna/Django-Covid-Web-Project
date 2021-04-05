@@ -66,7 +66,8 @@ def country_lineplot():
     time_series_date1=[]
     for i in range(len(c_data2['cases_time_series'])):
         year = c_data2['cases_time_series'][i]['dateymd'][:4]
-        time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
+        # time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
+        time_series_date1.append(c_data2['cases_time_series'][i]['date'])
 
     time_series_date2 = np.array(time_series_date1)
 
@@ -74,7 +75,7 @@ def country_lineplot():
     # for i in time_series_date1:
     #     time_series_date2.append(i + "2020")
 
-    time_series_date3 = pd.to_datetime(time_series_date2, infer_datetime_format=True)
+    time_series_date3 = pd.to_datetime(time_series_date2)           ## , infer_datetime_format=True
     time_series_date3 = np.array(time_series_date3)
 
     dq1 = pd.DataFrame(data={'confirmed_cases':time_series1, 'dates':time_series_date3})
@@ -144,7 +145,8 @@ def country_lineplot_rate():
     time_series_date1=[]
     for i in range(len(c_data2['cases_time_series'])):
         year = c_data2['cases_time_series'][i]['dateymd'][:4]
-        time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
+        # time_series_date1.append(c_data2['cases_time_series'][i]['date'] + year)
+        time_series_date1.append(c_data2['cases_time_series'][i]['date'])
 
     time_series_date2 = np.array(time_series_date1)
 
